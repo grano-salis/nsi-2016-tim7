@@ -1,0 +1,1 @@
+napraviti git, konfigurisati projekat, vidjet koji je tip projekta i kakko ubacit angularJS
