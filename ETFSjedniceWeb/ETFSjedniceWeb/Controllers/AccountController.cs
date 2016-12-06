@@ -33,6 +33,7 @@ namespace ETFSjedniceWeb.Controllers
         public ActionResult Login(string returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;
+           
             return View();
         }
 
@@ -56,9 +57,10 @@ namespace ETFSjedniceWeb.Controllers
                     ModelState.AddModelError("", "Invalid username or password.");
                 }
             }
-
+            
             // If we got this far, something failed, redisplay form
             return View(model);
+           
         }
 
         //

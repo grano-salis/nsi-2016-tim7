@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
 namespace ETFSjedniceWeb.Controllers
 {   
     [Authorize]
@@ -12,6 +13,7 @@ namespace ETFSjedniceWeb.Controllers
         public ActionResult Index()
         {
             return View();
+            
         }
 
         
