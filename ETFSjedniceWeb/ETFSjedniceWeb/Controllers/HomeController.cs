@@ -22,6 +22,11 @@ namespace ETFSjedniceWeb.Controllers
 
         }
 
+        public ActionResult Ucesnici()
+        {
+            return View();
+
+        }
         
     }
 }

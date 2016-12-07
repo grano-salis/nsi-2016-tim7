@@ -50,7 +50,7 @@
     <div class="form-group">
         @Html.Label("Pozovi učesnike", new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            <input type="button" class="btn btn-default" value="Odaberi učesnike" />
+            <input type="button" class="btn btn-default" value="Odaberi učesnike" onclick="window.location = '/Home/Ucesnici';"  />
         </div>
     </div>
     <div class="form-group">
@@ -128,7 +128,8 @@
      
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" style ='background-color: darkgrey; border: 1pt ridge lightgrey; color:black; font-weight:bold; font-size:18px' value="Zakaži sjednicu" />
+            <input type="button" class="btn btn-default" style='background-color: darkgrey; border: 1pt ridge lightgrey; color:black; font-weight:bold; font-size:18px' value="Odustani"  />
+            <input type="button" class="btn btn-default" style ='background-color: darkgrey; border: 1pt ridge lightgrey; color:black; font-weight:bold; font-size:18px' value="Zakaži sjednicu" />
         </div>
     </div>
 }
