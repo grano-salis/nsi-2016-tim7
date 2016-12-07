@@ -16,6 +16,12 @@ namespace ETFSjedniceWeb.Controllers
             
         }
 
+        public ActionResult ZakaziSjednicu()
+        {
+            return View();
+
+        }
+
         
     }
 }
