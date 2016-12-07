@@ -1,0 +1,114 @@
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\ETFSjedniceWeb.dll.config
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\ETFSjedniceWeb.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\ETFSjedniceWeb.pdb
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Antlr3.Runtime.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\EntityFramework.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\EntityFramework.SqlServer.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.Google.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Web.Infrastructure.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Newtonsoft.Json.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Owin.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.Helpers.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.Mvc.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.Optimization.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.Razor.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.WebPages.Deployment.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.WebPages.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.WebPages.Razor.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\WebGrease.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.Helpers.xml
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.Mvc.xml
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.Optimization.xml
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.Razor.xml
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.WebPages.xml
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.WebPages.Deployment.xml
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.WebPages.Razor.xml
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Newtonsoft.Json.xml
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Antlr3.Runtime.pdb
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\EntityFramework.xml
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\EntityFramework.SqlServer.xml
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.xml
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.xml
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.Google.xml
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\obj\Debug\ETFSjedniceWeb.csprojResolveAssemblyReference.cache
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\obj\Debug\ETFSjedniceWeb.dll
+c:\users\saudin\documents\visual studio 2013\Projects\ETFSjedniceWeb\ETFSjedniceWeb\obj\Debug\ETFSjedniceWeb.pdb
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\ETFSjedniceWeb.dll.config
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\ETFSjedniceWeb.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\ETFSjedniceWeb.pdb
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Antlr3.Runtime.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\EntityFramework.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\EntityFramework.SqlServer.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Newtonsoft.Json.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Owin.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.Helpers.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.Mvc.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.Optimization.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.Razor.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.WebPages.Deployment.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.WebPages.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.WebPages.Razor.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\WebGrease.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.Helpers.xml
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.Mvc.xml
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.Optimization.xml
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.Razor.xml
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.WebPages.xml
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.WebPages.Deployment.xml
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.WebPages.Razor.xml
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Newtonsoft.Json.xml
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Antlr3.Runtime.pdb
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\EntityFramework.xml
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\EntityFramework.SqlServer.xml
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.xml
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.xml
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\obj\Debug\ETFSjedniceWeb.csprojResolveAssemblyReference.cache
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\obj\Debug\ETFSjedniceWeb.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\obj\Debug\ETFSjedniceWeb.pdb
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\SAUDIN\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
