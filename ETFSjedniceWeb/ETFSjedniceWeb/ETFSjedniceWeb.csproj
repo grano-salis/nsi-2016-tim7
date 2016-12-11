@@ -167,6 +167,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\ZapisnikController.cs" />
     <Compile Include="Hubs\ChatHub.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -174,7 +175,20 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\CHAT_PORUKA.cs" />
+    <Compile Include="Models\DNEVNI_RED.cs" />
+    <Compile Include="Models\GLA.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\PRILOG.cs" />
+    <Compile Include="Models\SJEDNICA.cs" />
+    <Compile Include="Models\STATUS_SJEDNICE.cs" />
+    <Compile Include="Models\STATUS_STAVKE_DNEVNOG_REDA.cs" />
+    <Compile Include="Models\STATUS_UCESNIKA.cs" />
+    <Compile Include="Models\STAVKA_DNEVNOG_REDA.cs" />
+    <Compile Include="Models\TIP_GLASA.cs" />
+    <Compile Include="Models\TIP_UCESNIKA.cs" />
+    <Compile Include="Models\UCESNIK.cs" />
+    <Compile Include="Models\ZAPISNIK.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -241,6 +255,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\ZakaziSjednicu.cshtml" />
     <Content Include="Views\Home\Ucesnici.cshtml" />
+    <Content Include="Views\Home\Zapisnik.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -27,6 +27,11 @@ namespace ETFSjedniceWeb.Controllers
             return View();
 
         }
+
+       public ActionResult Zapisnik()
+        {
+            return View();
+        }
         
     }
 }
