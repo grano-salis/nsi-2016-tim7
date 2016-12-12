@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\ZapisnikController.cs" />
+    <Compile Include="DnevniRedController.cs" />
     <Compile Include="Hubs\ChatHub.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -256,6 +257,11 @@
     <Content Include="Views\Home\ZakaziSjednicu.cshtml" />
     <Content Include="Views\Home\Ucesnici.cshtml" />
     <Content Include="Views\Home\Zapisnik.cshtml" />
+    <Content Include="Views\DnevniRed\Create.cshtml" />
+    <Content Include="Views\DnevniRed\Delete.cshtml" />
+    <Content Include="Views\DnevniRed\Details.cshtml" />
+    <Content Include="Views\DnevniRed\Edit.cshtml" />
+    <Content Include="Views\DnevniRed\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

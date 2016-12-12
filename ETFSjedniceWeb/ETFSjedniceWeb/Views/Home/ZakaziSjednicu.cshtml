@@ -119,8 +119,10 @@
     <div class="form-group">
         @Html.Label("Kreiraj dnevni red", new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            <input type="button" class="btn btn-default" value="Kreiraj" />
-        </div>
+            
+               <!-- <input type="button" class="btn btn-default" value="Kreiraj" />-->
+               @Html.ActionLink("Kreiraj", "Create", "DnevniRed", null, new { @class = "navbar-brand" })
+    </div>
     </div>
     
     <br />
@@ -133,6 +135,7 @@
         </div>
     </div>
 }
+
 
 
 

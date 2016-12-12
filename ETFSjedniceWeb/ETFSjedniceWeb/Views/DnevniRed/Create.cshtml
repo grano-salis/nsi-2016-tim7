@@ -1,0 +1,77 @@
+﻿@model ETFSjedniceWeb.Models.DNEVNI_RED
+
+<!--@{
+    ViewBag.Title = "Kreiranje dnevnog reda";
+}-->
+
+<h3>Kreiranje dnevnog reda</h3>
+<h4>Unesite podatke za dnevni red.</h4>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.Label("Naziv stavke", new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBox("Naziv")
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Kratki opis", new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                <input type="text" style="font-size: 18pt; height: 100px; width:350px; ">
+            </div>
+        </div>
+        <br /><br />
+        <h4>Lista unešenih stavki</h4>
+        <br />
+        <table class="table table-striped" style="color:white; border-color:white; border-style:double; font-weight:bold; font-family:Arial; font-size:16px">
+            <thead>
+                <tr>
+                    <th>Redni broj</th>
+                    <th>Naziv</th>
+                    <th>Opis</th>
+                    <th>Izbriši</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>1</td>
+                    <td>Novi zakon</td>
+                    <td>Rasprava o novom zakonu</td>
+                    <td>
+                        <input type="button" class="btn btn-default" style="background-color:red; color:black; font-weight:bold" value="X" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Poboljšanje uslova u laboratorijama</td>
+                    <td>Eventualne promjene za poboljšanje uslova u laboratorijama</td>
+                    <td>
+                        <input type="button" class="btn btn-default" style="background-color:red; color:black; font-weight:bold" value="X" />
+                    </td>
+                </tr>
+
+               
+
+            </tbody>
+        </table>
+
+       <!-- <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>-->
+    </div>
+}
+
+

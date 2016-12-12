@@ -16,6 +16,8 @@ namespace ETFSjedniceWeb.Models
 
         public System.Data.Entity.DbSet<ETFSjedniceWeb.Models.ZAPISNIK> ZAPISNIKs { get; set; }
 
+        public System.Data.Entity.DbSet<ETFSjedniceWeb.Models.DNEVNI_RED> DNEVNI_RED { get; set; }
+
         //public System.Data.Entity.DbSet<ETFSjedniceWeb.Models.ApplicationUser> ApplicationUsers { get; set; }
     }
 }
