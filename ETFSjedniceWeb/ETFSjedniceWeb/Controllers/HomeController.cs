@@ -32,6 +32,11 @@ namespace ETFSjedniceWeb.Controllers
         {
             return View();
         }
+
+       public ActionResult PrikazSjednica()
+       {
+           return View();
+       }
         
     }
 }

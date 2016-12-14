@@ -310,6 +310,7 @@
     <Content Include="Views\Sjednica\Details.cshtml" />
     <Content Include="Views\Sjednica\Edit.cshtml" />
     <Content Include="Views\Sjednica\Index.cshtml" />
+    <Content Include="Views\Home\PrikazSjednica.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
