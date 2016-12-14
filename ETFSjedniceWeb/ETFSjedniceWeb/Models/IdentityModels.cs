@@ -32,6 +32,8 @@ namespace ETFSjedniceWeb.Models
 
         public System.Data.Entity.DbSet<ETFSjedniceWeb.Models.STATUS_SJEDNICE> STATUS_SJEDNICE { get; set; }
 
+        public System.Data.Entity.DbSet<ETFSjedniceWeb.Models.SJEDNICA> SJEDNICAs { get; set; }
+
         //public System.Data.Entity.DbSet<ETFSjedniceWeb.Models.ApplicationUser> ApplicationUsers { get; set; }
     }
 }

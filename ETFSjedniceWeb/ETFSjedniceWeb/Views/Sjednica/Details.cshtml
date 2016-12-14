@@ -1,0 +1,58 @@
+﻿@model ETFSjedniceWeb.Models.SJEDNICA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SJEDNICA</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DATUM_ODRZAVANJA_OD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DATUM_ODRZAVANJA_OD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DATUM_ODRZAVANJA_DO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DATUM_ODRZAVANJA_DO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NAZIV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NAZIV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DNEVNI_RED_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DNEVNI_RED_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SALA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SALA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
