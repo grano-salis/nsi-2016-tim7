@@ -25,7 +25,7 @@ namespace ETFSjedniceWeb.Models
         public virtual ICollection<DNEVNI_RED> DNEVNI_RED { get; set; }
         public virtual ZAPISNIK ZAPISNIK { get; set; }
         public virtual ICollection<SJEDNICA> SJEDNICA1 { get; set; }
-        public virtual SJEDNICA SJEDNICA2 { get; set; }
+        //public virtual SJEDNICA SJEDNICA2 { get; set; }
         public virtual ICollection<UCESNIK> UCESNIKs { get; set; }
         public virtual ICollection<ZAPISNIK> ZAPISNIKs { get; set; }
     }

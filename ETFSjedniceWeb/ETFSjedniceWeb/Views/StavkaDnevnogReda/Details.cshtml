@@ -1,0 +1,42 @@
+﻿@model ETFSjedniceWeb.Models.STAVKA_DNEVNOG_REDA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>STAVKA_DNEVNOG_REDA</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.REDNI_BROJ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.REDNI_BROJ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NASLOV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NASLOV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OPIS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OPIS)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

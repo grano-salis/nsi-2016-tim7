@@ -1,0 +1,48 @@
+﻿@model ETFSjedniceWeb.Models.STAVKA_DNEVNOG_REDA
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>STAVKA_DNEVNOG_REDA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.REDNI_BROJ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.REDNI_BROJ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NASLOV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NASLOV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OPIS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OPIS)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

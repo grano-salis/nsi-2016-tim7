@@ -1,0 +1,42 @@
+﻿@model ETFSjedniceWeb.Models.PRILOG
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PRILOG</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NAZIV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NAZIV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CONTENT_TYPE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CONTENT_TYPE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SADRZAJ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SADRZAJ)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

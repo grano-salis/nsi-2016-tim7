@@ -7,121 +7,114 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ETFSjedniceWeb.Models;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace ETFSjedniceWeb
 {
     public class DnevniRedController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
-
-        // GET: /DnevniRed/
-        public ActionResult Index()
+        HttpClient client;
+        //The URL of the WEB API Service
+        string url = "http://servissjednice.azurewebsites.net/api/dnevnired";
+        //The HttpClient Class, this will be used for performing 
+        //HTTP Operations, GET, POST, PUT, DELETE
+        //Set the base address and the Header Formatter
+        public DnevniRedController()
         {
-            return View(db.DNEVNI_RED.ToList());
+            client = new HttpClient();
+            client.BaseAddress = new Uri(url);
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
-        // GET: /DnevniRed/Details/5
-        public ActionResult Details(int? id)
+        // GET: EmployeeInfo
+        public async Task<ActionResult> Index()
         {
-            if (id == null)
+            HttpResponseMessage responseMessage = await client.GetAsync(url);
+            if (responseMessage.IsSuccessStatusCode)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                var responseData = responseMessage.Content.ReadAsStringAsync().Result;
+                var Employees = JsonConvert.DeserializeObject<List<DNEVNI_RED>>(responseData);
+                return View(Employees);
             }
-            DNEVNI_RED dnevni_red = db.DNEVNI_RED.Find(id);
-            if (dnevni_red == null)
-            {
-                return HttpNotFound();
-            }
-            return View(dnevni_red);
+            return View("Error");
         }
 
-        // GET: /DnevniRed/Create
+        public async Task<ActionResult> Details(int id)
+        {
+            HttpResponseMessage responseMessage = await client.GetAsync(url + "/" + id);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var responseData = responseMessage.Content.ReadAsStringAsync().Result;
+                var Employees = JsonConvert.DeserializeObject<DNEVNI_RED>(responseData);
+                return View(Employees);
+            }
+            return View("Error");
+        }
+
         public ActionResult Create()
         {
-            return View();
+            return View(new DNEVNI_RED());
         }
-
-        // POST: /DnevniRed/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        //The Post method
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="ID")] DNEVNI_RED dnevni_red)
+        public async Task<ActionResult> Create(DNEVNI_RED tipGlasa)
         {
-            if (ModelState.IsValid)
+
+            HttpResponseMessage responseMessage = await client.PostAsJsonAsync(url, tipGlasa);
+            if (responseMessage.IsSuccessStatusCode)
             {
-                db.DNEVNI_RED.Add(dnevni_red);
-                db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
-            return View(dnevni_red);
+            return RedirectToAction("Error");
         }
 
-        // GET: /DnevniRed/Edit/5
-        public ActionResult Edit(int? id)
+        public async Task<ActionResult> Edit(int id)
         {
-            if (id == null)
+            HttpResponseMessage responseMessage = await client.GetAsync(url + "/" + id);
+            if (responseMessage.IsSuccessStatusCode)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                var responseData = responseMessage.Content.ReadAsStringAsync().Result;
+                var Employee = JsonConvert.DeserializeObject<DNEVNI_RED>(responseData);
+                return View(Employee);
             }
-            DNEVNI_RED dnevni_red = db.DNEVNI_RED.Find(id);
-            if (dnevni_red == null)
-            {
-                return HttpNotFound();
-            }
-            return View(dnevni_red);
+            return View("Error");
         }
-
-        // POST: /DnevniRed/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        //The PUT Method
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="ID")] DNEVNI_RED dnevni_red)
+        public async Task<ActionResult> Edit(int id, DNEVNI_RED Emp)
         {
-            if (ModelState.IsValid)
+            HttpResponseMessage responseMessage = await client.PutAsJsonAsync(url + "/" + id, Emp);
+            if (responseMessage.IsSuccessStatusCode)
             {
-                db.Entry(dnevni_red).State = EntityState.Modified;
-                db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(dnevni_red);
+            return RedirectToAction("Error");
         }
-
-        // GET: /DnevniRed/Delete/5
-        public ActionResult Delete(int? id)
+        public async Task<ActionResult> Delete(int id)
         {
-            if (id == null)
+            HttpResponseMessage responseMessage = await client.GetAsync(url + "/" + id);
+            if (responseMessage.IsSuccessStatusCode)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                var responseData = responseMessage.Content.ReadAsStringAsync().Result;
+                var Employee = JsonConvert.DeserializeObject<DNEVNI_RED>(responseData);
+                return View(Employee);
             }
-            DNEVNI_RED dnevni_red = db.DNEVNI_RED.Find(id);
-            if (dnevni_red == null)
-            {
-                return HttpNotFound();
-            }
-            return View(dnevni_red);
+            return View("Error");
         }
-
-        // POST: /DnevniRed/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        //The DELETE method
+        [HttpPost]
+        public async Task<ActionResult> Delete(int id, DNEVNI_RED tipGlasa)
         {
-            DNEVNI_RED dnevni_red = db.DNEVNI_RED.Find(id);
-            db.DNEVNI_RED.Remove(dnevni_red);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
+            HttpResponseMessage responseMessage = await client.DeleteAsync(url + "/" + id);
+            if (responseMessage.IsSuccessStatusCode)
             {
-                db.Dispose();
+                return RedirectToAction("Index");
             }
-            base.Dispose(disposing);
+            return RedirectToAction("Error");
         }
     }
 }

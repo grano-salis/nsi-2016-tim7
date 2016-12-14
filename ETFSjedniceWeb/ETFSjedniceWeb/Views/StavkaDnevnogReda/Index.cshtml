@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ETFSjedniceWeb.Models.STAVKA_DNEVNOG_REDA>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.REDNI_BROJ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NASLOV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OPIS)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.REDNI_BROJ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NASLOV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OPIS)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
