@@ -17,7 +17,7 @@
         @Html.HiddenFor(model => model.ID)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.DATUM_ODRZAVANJA_OD, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.DATUM_ODRZAVANJA_OD, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.DATUM_ODRZAVANJA_OD)
                 @Html.ValidationMessageFor(model => model.DATUM_ODRZAVANJA_OD)
@@ -25,7 +25,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.DATUM_ODRZAVANJA_DO, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.DATUM_ODRZAVANJA_DO, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.DATUM_ODRZAVANJA_DO)
                 @Html.ValidationMessageFor(model => model.DATUM_ODRZAVANJA_DO)
@@ -33,7 +33,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.NAZIV, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.NAZIV, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.NAZIV)
                 @Html.ValidationMessageFor(model => model.NAZIV)
@@ -41,15 +41,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.DNEVNI_RED_ID, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.DNEVNI_RED_ID)
-                @Html.ValidationMessageFor(model => model.DNEVNI_RED_ID)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.SALA, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.SALA, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.SALA)
                 @Html.ValidationMessageFor(model => model.SALA)

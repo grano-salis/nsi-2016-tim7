@@ -14,9 +14,8 @@
         <h4>TIP_GLASA</h4>
         <hr />
         @Html.ValidationSummary(true)
-
         <div class="form-group">
-            @Html.LabelFor(model => model.NAZIV, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.NAZIV, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.NAZIV)
                 @Html.ValidationMessageFor(model => model.NAZIV)

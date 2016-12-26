@@ -14,9 +14,9 @@ namespace ETFSjedniceWeb.Models
         {
         }
 
-        public System.Data.Entity.DbSet<ETFSjedniceWeb.Models.ZAPISNIK> ZAPISNIKs { get; set; }
+       
 
-        public System.Data.Entity.DbSet<ETFSjedniceWeb.Models.DNEVNI_RED> DNEVNI_RED { get; set; }
+        
 
         public System.Data.Entity.DbSet<ETFSjedniceWeb.Models.PRILOG> PRILOGs { get; set; }
 
@@ -28,11 +28,19 @@ namespace ETFSjedniceWeb.Models
 
         public System.Data.Entity.DbSet<ETFSjedniceWeb.Models.UCESNIK> UCESNIKs { get; set; }
 
-        public System.Data.Entity.DbSet<ETFSjedniceWeb.Models.GLA> GLAs { get; set; }
+        public System.Data.Entity.DbSet<ETFSjedniceWeb.Models.GLAS> GLAs { get; set; }
 
         public System.Data.Entity.DbSet<ETFSjedniceWeb.Models.STATUS_SJEDNICE> STATUS_SJEDNICE { get; set; }
 
         public System.Data.Entity.DbSet<ETFSjedniceWeb.Models.SJEDNICA> SJEDNICAs { get; set; }
+
+        public System.Data.Entity.DbSet<ETFSjedniceWeb.Models.CHAT_PORUKA> CHAT_PORUKA { get; set; }
+
+        public System.Data.Entity.DbSet<ETFSjedniceWeb.Models.CV_USER_INFO> CV_USER_INFO { get; set; }
+
+        public System.Data.Entity.DbSet<ETFSjedniceWeb.Models.STATUS_UCESNIKA> STATUS_UCESNIKA { get; set; }
+
+        public System.Data.Entity.DbSet<ETFSjedniceWeb.Models.TIP_UCESNIKA> TIP_UCESNIKA { get; set; }
 
         //public System.Data.Entity.DbSet<ETFSjedniceWeb.Models.ApplicationUser> ApplicationUsers { get; set; }
     }

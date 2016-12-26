@@ -1,32 +1,36 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
 namespace ETFSjedniceWeb.Models
 {
-    public class SJEDNICA
+    public  class SJEDNICA
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SJEDNICA()
         {
-            this.DNEVNI_RED = new HashSet<DNEVNI_RED>();
-            this.SJEDNICA1 = new HashSet<SJEDNICA>();
-            this.UCESNIKs = new HashSet<UCESNIK>();
-            this.ZAPISNIKs = new HashSet<ZAPISNIK>();
+            this.PRILOG = new HashSet<PRILOG>();
+            this.STAVKA_DNEVNOG_REDA = new HashSet<STAVKA_DNEVNOG_REDA>();
+            this.UCESNIK = new HashSet<UCESNIK>();
         }
 
         public int ID { get; set; }
         public System.DateTime DATUM_ODRZAVANJA_OD { get; set; }
         public Nullable<System.DateTime> DATUM_ODRZAVANJA_DO { get; set; }
         public string NAZIV { get; set; }
-        public Nullable<decimal> DNEVNI_RED_ID { get; set; }
         public string SALA { get; set; }
-
-        public virtual ICollection<DNEVNI_RED> DNEVNI_RED { get; set; }
-        public virtual ZAPISNIK ZAPISNIK { get; set; }
-        public virtual ICollection<SJEDNICA> SJEDNICA1 { get; set; }
-        //public virtual SJEDNICA SJEDNICA2 { get; set; }
-        public virtual ICollection<UCESNIK> UCESNIKs { get; set; }
-        public virtual ICollection<ZAPISNIK> ZAPISNIKs { get; set; }
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PRILOG> PRILOG { get; set; }
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<STAVKA_DNEVNOG_REDA> STAVKA_DNEVNOG_REDA { get; set; }
+        [JsonIgnore]
+        public virtual STATUS_SJEDNICE STATUS_SJEDNICE { get; set; }
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<UCESNIK> UCESNIK { get; set; }
     }
 }

@@ -65,13 +65,24 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.0.0\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -168,8 +179,19 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="DnevniRedController.cs" />
-    <Compile Include="GlasController.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ChatPorukaController.cs" />
+    <Compile Include="Controllers\CvUserInfoController.cs" />
+    <Compile Include="Controllers\GlasController.cs" />
+    <Compile Include="Controllers\PrilogController.cs" />
+    <Compile Include="Controllers\SjednicaController.cs" />
+    <Compile Include="Controllers\StatusSjedniceController.cs" />
+    <Compile Include="Controllers\StatusStavkeDnevnogRedaController.cs" />
+    <Compile Include="Controllers\StatusUcesnikaController.cs" />
+    <Compile Include="Controllers\StavkaDnevnogRedaController.cs" />
+    <Compile Include="Controllers\TipGlasaController.cs" />
+    <Compile Include="Controllers\TipUcesnikaController.cs" />
+    <Compile Include="Controllers\UcesnikController.cs" />
     <Compile Include="Hubs\ChatHub.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -178,8 +200,8 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CHAT_PORUKA.cs" />
-    <Compile Include="Models\DNEVNI_RED.cs" />
-    <Compile Include="Models\GLA.cs" />
+    <Compile Include="Models\CV_USER_INFO.cs" />
+    <Compile Include="Models\GLAS.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\PRILOG.cs" />
     <Compile Include="Models\SJEDNICA.cs" />
@@ -190,16 +212,8 @@
     <Compile Include="Models\TIP_GLASA.cs" />
     <Compile Include="Models\TIP_UCESNIKA.cs" />
     <Compile Include="Models\UCESNIK.cs" />
-    <Compile Include="Models\ZAPISNIK.cs" />
-    <Compile Include="PrilogController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SjednicaController.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="StatusSjedniceController.cs" />
-    <Compile Include="StatusStavkeDnevnogRedaController.cs" />
-    <Compile Include="StavkaDnevnogRedaController.cs" />
-    <Compile Include="TipGlasaController.cs" />
-    <Compile Include="UcesnikController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -265,52 +279,67 @@
     <Content Include="Views\Home\ZakaziSjednicu.cshtml" />
     <Content Include="Views\Home\Ucesnici.cshtml" />
     <Content Include="Views\Home\Zapisnik.cshtml" />
-    <Content Include="Views\Prilog\Create.cshtml" />
-    <Content Include="Views\Prilog\Delete.cshtml" />
-    <Content Include="Views\Prilog\Details.cshtml" />
-    <Content Include="Views\Prilog\Edit.cshtml" />
-    <Content Include="Views\Prilog\Index.cshtml" />
-    <Content Include="Views\TipGlasa\Create.cshtml" />
-    <Content Include="Views\TipGlasa\Delete.cshtml" />
-    <Content Include="Views\TipGlasa\Details.cshtml" />
-    <Content Include="Views\TipGlasa\Edit.cshtml" />
-    <Content Include="Views\TipGlasa\Index.cshtml" />
-    <Content Include="Views\StatusStavkeDnevnogReda\Create.cshtml" />
-    <Content Include="Views\StatusStavkeDnevnogReda\Delete.cshtml" />
-    <Content Include="Views\StatusStavkeDnevnogReda\Details.cshtml" />
-    <Content Include="Views\StatusStavkeDnevnogReda\Edit.cshtml" />
-    <Content Include="Views\StatusStavkeDnevnogReda\Index.cshtml" />
-    <Content Include="Views\StavkaDnevnogReda\Create.cshtml" />
-    <Content Include="Views\StavkaDnevnogReda\Delete.cshtml" />
-    <Content Include="Views\StavkaDnevnogReda\Details.cshtml" />
-    <Content Include="Views\StavkaDnevnogReda\Edit.cshtml" />
-    <Content Include="Views\StavkaDnevnogReda\Index.cshtml" />
-    <Content Include="Views\Ucesnik\Create.cshtml" />
-    <Content Include="Views\Ucesnik\Delete.cshtml" />
-    <Content Include="Views\Ucesnik\Details.cshtml" />
-    <Content Include="Views\Ucesnik\Edit.cshtml" />
-    <Content Include="Views\Ucesnik\Index.cshtml" />
+    <Content Include="Views\Home\PrikazSjednica.cshtml" />
+    <Content Include="Views\ChatPoruka\Create.cshtml" />
+    <Content Include="Views\ChatPoruka\Delete.cshtml" />
+    <Content Include="Views\ChatPoruka\Details.cshtml" />
+    <Content Include="Views\ChatPoruka\Edit.cshtml" />
+    <Content Include="Views\ChatPoruka\Index.cshtml" />
+    <Content Include="Views\CvUserInfo\Create.cshtml" />
+    <Content Include="Views\CvUserInfo\Delete.cshtml" />
+    <Content Include="Views\CvUserInfo\Details.cshtml" />
+    <Content Include="Views\CvUserInfo\Edit.cshtml" />
+    <Content Include="Views\CvUserInfo\Index.cshtml" />
     <Content Include="Views\Glas\Create.cshtml" />
     <Content Include="Views\Glas\Delete.cshtml" />
     <Content Include="Views\Glas\Details.cshtml" />
     <Content Include="Views\Glas\Edit.cshtml" />
     <Content Include="Views\Glas\Index.cshtml" />
-    <Content Include="Views\StatusSjednice\Create.cshtml" />
-    <Content Include="Views\StatusSjednice\Delete.cshtml" />
-    <Content Include="Views\StatusSjednice\Details.cshtml" />
-    <Content Include="Views\StatusSjednice\Edit.cshtml" />
-    <Content Include="Views\StatusSjednice\Index.cshtml" />
-    <Content Include="Views\DnevniRed\Create.cshtml" />
-    <Content Include="Views\DnevniRed\Delete.cshtml" />
-    <Content Include="Views\DnevniRed\Details.cshtml" />
-    <Content Include="Views\DnevniRed\Edit.cshtml" />
-    <Content Include="Views\DnevniRed\Index.cshtml" />
+    <Content Include="Views\Prilog\Create.cshtml" />
+    <Content Include="Views\Prilog\Delete.cshtml" />
+    <Content Include="Views\Prilog\Details.cshtml" />
+    <Content Include="Views\Prilog\Edit.cshtml" />
+    <Content Include="Views\Prilog\Index.cshtml" />
     <Content Include="Views\Sjednica\Create.cshtml" />
     <Content Include="Views\Sjednica\Delete.cshtml" />
     <Content Include="Views\Sjednica\Details.cshtml" />
     <Content Include="Views\Sjednica\Edit.cshtml" />
     <Content Include="Views\Sjednica\Index.cshtml" />
-    <Content Include="Views\Home\PrikazSjednica.cshtml" />
+    <Content Include="Views\StatusSjednice\Create.cshtml" />
+    <Content Include="Views\StatusSjednice\Delete.cshtml" />
+    <Content Include="Views\StatusSjednice\Details.cshtml" />
+    <Content Include="Views\StatusSjednice\Edit.cshtml" />
+    <Content Include="Views\StatusSjednice\Index.cshtml" />
+    <Content Include="Views\StatusStavkeDnevnogReda\Create.cshtml" />
+    <Content Include="Views\StatusStavkeDnevnogReda\Delete.cshtml" />
+    <Content Include="Views\StatusStavkeDnevnogReda\Details.cshtml" />
+    <Content Include="Views\StatusStavkeDnevnogReda\Edit.cshtml" />
+    <Content Include="Views\StatusStavkeDnevnogReda\Index.cshtml" />
+    <Content Include="Views\StatusUcesnika\Create.cshtml" />
+    <Content Include="Views\StatusUcesnika\Delete.cshtml" />
+    <Content Include="Views\StatusUcesnika\Details.cshtml" />
+    <Content Include="Views\StatusUcesnika\Edit.cshtml" />
+    <Content Include="Views\StatusUcesnika\Index.cshtml" />
+    <Content Include="Views\StavkaDnevnogReda\Create.cshtml" />
+    <Content Include="Views\StavkaDnevnogReda\Delete.cshtml" />
+    <Content Include="Views\StavkaDnevnogReda\Details.cshtml" />
+    <Content Include="Views\StavkaDnevnogReda\Edit.cshtml" />
+    <Content Include="Views\StavkaDnevnogReda\Index.cshtml" />
+    <Content Include="Views\TipGlasa\Create.cshtml" />
+    <Content Include="Views\TipGlasa\Delete.cshtml" />
+    <Content Include="Views\TipGlasa\Details.cshtml" />
+    <Content Include="Views\TipGlasa\Edit.cshtml" />
+    <Content Include="Views\TipGlasa\Index.cshtml" />
+    <Content Include="Views\TipUcesnika\Create.cshtml" />
+    <Content Include="Views\TipUcesnika\Delete.cshtml" />
+    <Content Include="Views\TipUcesnika\Details.cshtml" />
+    <Content Include="Views\TipUcesnika\Edit.cshtml" />
+    <Content Include="Views\TipUcesnika\Index.cshtml" />
+    <Content Include="Views\Ucesnik\Create.cshtml" />
+    <Content Include="Views\Ucesnik\Delete.cshtml" />
+    <Content Include="Views\Ucesnik\Details.cshtml" />
+    <Content Include="Views\Ucesnik\Edit.cshtml" />
+    <Content Include="Views\Ucesnik\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
