@@ -414,3 +414,9 @@ C:\Users\SAUDIN\Desktop\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.W
 C:\Users\SAUDIN\Desktop\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.Http.WebHost.dll
 C:\Users\SAUDIN\Desktop\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.Http.xml
 C:\Users\SAUDIN\Desktop\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.Http.WebHost.xml
+C:\Users\Larisa\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Net.Http.Formatting.dll
+C:\Users\Larisa\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.Http.dll
+C:\Users\Larisa\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.Http.WebHost.dll
+C:\Users\Larisa\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Net.Http.Formatting.xml
+C:\Users\Larisa\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.Http.xml
+C:\Users\Larisa\Documents\GitHub\nsi-2016-tim7\ETFSjedniceWeb\ETFSjedniceWeb\bin\System.Web.Http.WebHost.xml

@@ -4,18 +4,19 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<h3>Zakazivanje sjednice</h3>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" })) 
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>SJEDNICA</h4>
+        <h4>Unesite podatke o sjednici.</h4>
         <hr />
         @Html.ValidationSummary(true)
+
         <div class="form-group">
-            @Html.LabelFor(model => model.DATUM_ODRZAVANJA_OD, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Datum početka sjednice", new { @class = "col-md-2 control-label" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.DATUM_ODRZAVANJA_OD)
                 @Html.ValidationMessageFor(model => model.DATUM_ODRZAVANJA_OD)
@@ -23,7 +24,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.DATUM_ODRZAVANJA_DO, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Datum završetka sjednice", new { @class = "col-md-2 control-label" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.DATUM_ODRZAVANJA_DO)
                 @Html.ValidationMessageFor(model => model.DATUM_ODRZAVANJA_DO)
@@ -31,7 +32,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.NAZIV, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Tema", new { @class = "col-md-2 control-label" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.NAZIV)
                 @Html.ValidationMessageFor(model => model.NAZIV)
@@ -39,10 +40,17 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.SALA, htmlAttributes: new { @class = "control-label col-md-2" })
+           @Html.Label("Mjesto održavanja", new { @class = "col-md-2 control-label" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.SALA)
                 @Html.ValidationMessageFor(model => model.SALA)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Pozovi učesnike", new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                <input type="button" class="btn btn-default" value="Odaberi učesnike" onclick="window.location = '/Home/Ucesnici';" />
             </div>
         </div>
 
@@ -51,9 +59,16 @@
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </div>
+
+        <div class="form-group">
+            @Html.Label("Kreiraj dnevni red", new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+
+                <input type="button" class="btn btn-default" value="Kreiraj" />
+                @*@Html.ActionLink("Kreiraj", "Create", "DnevniRed", null, new { @class = "navbar-brand" })*@
+            </div>
+        </div>
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+
