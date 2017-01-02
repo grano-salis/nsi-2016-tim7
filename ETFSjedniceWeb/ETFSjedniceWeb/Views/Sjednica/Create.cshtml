@@ -4,9 +4,13 @@
     ViewBag.Title = "Create";
 }
 
+<<<<<<< HEAD
 <h3>Zakaži sjednicu</h3>
+=======
+<h3>Zakazivanje sjednice</h3>
+>>>>>>> origin/master
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" })) 
 {
     @Html.AntiForgeryToken()
     
@@ -14,9 +18,14 @@
         <h4>Unesite podatke o sjednici.</h4>
         <hr />
         @Html.ValidationSummary(true)
+
         <div class="form-group">
+<<<<<<< HEAD
           <!--  @Html.LabelFor(model => model.DATUM_ODRZAVANJA_OD, htmlAttributes: new { @class = "control-label col-md-2" })-->
             @Html.Label("POČETAK SJEDNICE", new { @class = "col-md-2 control-label" })
+=======
+            @Html.Label("Datum početka sjednice", new { @class = "col-md-2 control-label" })
+>>>>>>> origin/master
             <div class="col-md-10">
                @Html.TextBox("StartDate", Model.DATUM_ODRZAVANJA_OD, new { @class = "datepicker", @type = "date" })
                 
@@ -25,8 +34,12 @@
         </div>
 
         <div class="form-group">
+<<<<<<< HEAD
           <!--  @Html.LabelFor(model => model.DATUM_ODRZAVANJA_DO, htmlAttributes: new { @class = "control-label col-md-2" })-->
             @Html.Label("KRAJ SJEDNICE", new { @class = "col-md-2 control-label" })
+=======
+            @Html.Label("Datum završetka sjednice", new { @class = "col-md-2 control-label" })
+>>>>>>> origin/master
             <div class="col-md-10">
                 @Html.TextBox("StartDate", Model.DATUM_ODRZAVANJA_DO, new { @class = "datepicker", @type = "date" })
                 @Html.ValidationMessageFor(model => model.DATUM_ODRZAVANJA_DO)
@@ -34,7 +47,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.NAZIV, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Tema", new { @class = "col-md-2 control-label" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.NAZIV)
                 @Html.ValidationMessageFor(model => model.NAZIV)
@@ -42,7 +55,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.SALA, htmlAttributes: new { @class = "control-label col-md-2" })
+           @Html.Label("Mjesto održavanja", new { @class = "col-md-2 control-label" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.SALA)
                 @Html.ValidationMessageFor(model => model.SALA)
@@ -52,13 +65,33 @@
     
 
         <div class="form-group">
+            @Html.Label("Pozovi učesnike", new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                <input type="button" class="btn btn-default" value="Odaberi učesnike" onclick="window.location = '/Home/Ucesnici';" />
+            </div>
+        </div>
+
+        <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Kreiraj dnevni red", new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+
+                <input type="button" class="btn btn-default" value="Kreiraj" />
+                @*@Html.ActionLink("Kreiraj", "Create", "DnevniRed", null, new { @class = "navbar-brand" })*@
             </div>
         </div>
     </div>
 }
 
+<<<<<<< HEAD
 <div>
     @Html.ActionLink("Nazad", "Index")
 </div>
+=======
+
+>>>>>>> origin/master
