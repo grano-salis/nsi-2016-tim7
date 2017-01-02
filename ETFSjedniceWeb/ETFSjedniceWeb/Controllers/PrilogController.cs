@@ -8,9 +8,9 @@ using System.Web;
 using System.Web.Mvc;
 using ETFSjedniceWeb.Models;
 using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using System.Net.Http.Headers;
 
 namespace ETFSjedniceWeb.Controllers
 {
@@ -18,7 +18,7 @@ namespace ETFSjedniceWeb.Controllers
     {
         HttpClient client;
         //The URL of the WEB API Service
-        string url = "http://esjedniceservis.azurewebsites.net/api/Prilog";
+        string url = Startup.url + "/api/Prilog";
         //The HttpClient Class, this will be used for performing 
         //HTTP Operations, GET, POST, PUT, DELETE
         //Set the base address and the Header Formatter

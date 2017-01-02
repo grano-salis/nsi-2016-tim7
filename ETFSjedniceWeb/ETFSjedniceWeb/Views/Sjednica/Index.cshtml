@@ -4,18 +4,20 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h3>Zakazane sjednice</h3>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Zakaži novu sjednicu!", "Create")
 </p>
-<table class="table">
+<table class="table table-striped" style="color:white; border-style: double; font-weight:bold; font-family:Arial; font-size:16px">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.DATUM_ODRZAVANJA_OD)
+          <!--  @Html.DisplayNameFor(model => model.DATUM_ODRZAVANJA_OD)-->
+            POČETAK SJEDNICE
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DATUM_ODRZAVANJA_DO)
+           <!--ml.DisplayNameFor(model => model.DATUM_ODRZAVANJA_DO)-->
+           KRAJ SJEDNICE
         </th>
         <th>
             @Html.DisplayNameFor(model => model.NAZIV)
@@ -23,6 +25,9 @@
         <th>
             @Html.DisplayNameFor(model => model.SALA)
         </th>
+      <!--  <th>
+           @Html.DisplayNameFor(model => model.STATUS_SJEDNICE_ID)
+        </th>-->
         <th></th>
     </tr>
 
@@ -40,10 +45,14 @@
         <td>
             @Html.DisplayFor(modelItem => item.SALA)
         </td>
+       <!-- <td>
+            @Html.DisplayFor(modelItem => item.STATUS_SJEDNICE_ID)
+        </td>-->
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @Html.ActionLink("Kreiraj dnevni red", "ListaStavki",  "StavkaDnevnogReda",new { id = item.ID },null) |
+            @Html.ActionLink("Pozovi učesnike","DodajUcesnike", "CvUserInfo") |
+            @Html.ActionLink("Više", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Izbriši", "Delete", new { id=item.ID })
         </td>
     </tr>
 }

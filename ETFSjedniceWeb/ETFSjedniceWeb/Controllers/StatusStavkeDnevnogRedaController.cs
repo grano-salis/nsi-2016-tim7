@@ -8,8 +8,8 @@ using System.Web;
 using System.Web.Mvc;
 using ETFSjedniceWeb.Models;
 using System.Net.Http;
-using System.Threading.Tasks;
 using System.Net.Http.Headers;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
 
 namespace ETFSjedniceWeb.Controllers
@@ -18,7 +18,7 @@ namespace ETFSjedniceWeb.Controllers
     {
         HttpClient client;
         //The URL of the WEB API Service
-        string url = "http://esjedniceservis.azurewebsites.net/api/StatusStavkeDnevnogReda";
+        string url = Startup.url + "/api/StatusStavkeDnevnogReda";
         //The HttpClient Class, this will be used for performing 
         //HTTP Operations, GET, POST, PUT, DELETE
         //Set the base address and the Header Formatter
@@ -117,4 +117,5 @@ namespace ETFSjedniceWeb.Controllers
             return RedirectToAction("Error");
         }
     }
+    
 }

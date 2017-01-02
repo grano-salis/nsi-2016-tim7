@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="eSjedniceEntities-Web.config Connection String" description="eSjedniceEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/DbModel.SjedniceModel.csdl|res://*/DbModel.SjedniceModel.ssdl|res://*/DbModel.SjedniceModel.msl;provider=Oracle.ManagedDataAccess.Client;provider connection string=&quot;DATA SOURCE=80.65.65.66:1521/ETFLAB.DB.LAB.ETF.UNSA.BA;password=wWx09!;PERSIST SECURITY INFO=True;USER ID=NSI09&quot;" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\SAUDIN\\Documents\\Visual\ Studio\ 2013\\Projects\\ESjedniceServis\\ESjedniceServis\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='eSjedniceEntities']/@connectionString" />
+  <parameter name="eSjedniceModel-Web.config Connection String" description="eSjedniceModel Connection String used in web.config by the application to access the database." defaultValue="DATA SOURCE=80.65.65.66:1521/ETFLAB.DB.LAB.ETF.UNSA.BA;password=wWx09!;PERSIST SECURITY INFO=True;USER ID=NSI09" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\SAUDIN\\Desktop\\nsi-2016-tim7\\ESjedniceServis\\ESjedniceServis\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='eSjedniceModel']/@connectionString" />
   </parameter>
 </parameters>

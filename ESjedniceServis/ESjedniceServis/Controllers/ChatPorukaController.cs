@@ -6,29 +6,28 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using ESjedniceServis.DbModel;
-using System.Web.Http.Cors;
 
 namespace ESjedniceServis.Controllers
 {
-    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ChatPorukaController : ApiController
     {
         private eSjedniceEntities db = new eSjedniceEntities();
 
-        // GET: api/ChatPoruka
+        // GET: api/CHAT_PORUKA
         public IQueryable<CHAT_PORUKA> GetCHAT_PORUKA()
         {
             return db.CHAT_PORUKA;
         }
 
-        // GET: api/ChatPoruka/5
+        // GET: api/CHAT_PORUKA/5
         [ResponseType(typeof(CHAT_PORUKA))]
-        public IHttpActionResult GetCHAT_PORUKA(int id)
+        public async Task<IHttpActionResult> GetCHAT_PORUKA(int id)
         {
-            CHAT_PORUKA cHAT_PORUKA = db.CHAT_PORUKA.Find(id);
+            CHAT_PORUKA cHAT_PORUKA = await db.CHAT_PORUKA.FindAsync(id);
             if (cHAT_PORUKA == null)
             {
                 return NotFound();
@@ -37,9 +36,9 @@ namespace ESjedniceServis.Controllers
             return Ok(cHAT_PORUKA);
         }
 
-        // PUT: api/ChatPoruka/5
+        // PUT: api/CHAT_PORUKA/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutCHAT_PORUKA(int id, CHAT_PORUKA cHAT_PORUKA)
+        public async Task<IHttpActionResult> PutCHAT_PORUKA(int id, CHAT_PORUKA cHAT_PORUKA)
         {
             if (!ModelState.IsValid)
             {
@@ -55,7 +54,7 @@ namespace ESjedniceServis.Controllers
 
             try
             {
-                db.SaveChanges();
+                await db.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -72,48 +71,33 @@ namespace ESjedniceServis.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/ChatPoruka
+        // POST: api/CHAT_PORUKA
         [ResponseType(typeof(CHAT_PORUKA))]
-        public IHttpActionResult PostCHAT_PORUKA(CHAT_PORUKA cHAT_PORUKA)
-        {
+        public async Task<IHttpActionResult> PostCHAT_PORUKA(CHAT_PORUKA cHAT_PORUKA)
+        {            
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
             db.CHAT_PORUKA.Add(cHAT_PORUKA);
-
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateException)
-            {
-                if (CHAT_PORUKAExists(cHAT_PORUKA.ID))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            await db.SaveChangesAsync();
 
             return CreatedAtRoute("DefaultApi", new { id = cHAT_PORUKA.ID }, cHAT_PORUKA);
         }
 
-        // DELETE: api/ChatPoruka/5
+        // DELETE: api/CHAT_PORUKA/5
         [ResponseType(typeof(CHAT_PORUKA))]
-        public IHttpActionResult DeleteCHAT_PORUKA(int id)
+        public async Task<IHttpActionResult> DeleteCHAT_PORUKA(int id)
         {
-            CHAT_PORUKA cHAT_PORUKA = db.CHAT_PORUKA.Find(id);
+            CHAT_PORUKA cHAT_PORUKA = await db.CHAT_PORUKA.FindAsync(id);
             if (cHAT_PORUKA == null)
             {
                 return NotFound();
             }
 
             db.CHAT_PORUKA.Remove(cHAT_PORUKA);
-            db.SaveChanges();
+            await db.SaveChangesAsync();
 
             return Ok(cHAT_PORUKA);
         }

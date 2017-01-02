@@ -4,14 +4,15 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Detalji o sjednici</h2>
 
 <div>
-    <h4>SJEDNICA</h4>
+
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.DATUM_ODRZAVANJA_OD)
+           <!-- @Html.DisplayNameFor(model => model.DATUM_ODRZAVANJA_OD)-->
+            @Html.Label("POČETAK SJEDNICE", new { @class = "col-md-2 control-label" })
         </dt>
 
         <dd>
@@ -19,7 +20,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DATUM_ODRZAVANJA_DO)
+           <!-- @Html.DisplayNameFor(model => model.DATUM_ODRZAVANJA_DO)-->
+            @Html.Label("KRAJ SJEDNICE", new { @class = "col-md-2 control-label" })
         </dt>
 
         <dd>
@@ -27,7 +29,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.NAZIV)
+          <!--  @Html.DisplayNameFor(model => model.NAZIV)-->
+            @Html.Label("NAZIV", new { @class = "col-md-2 control-label" })
         </dt>
 
         <dd>
@@ -35,16 +38,25 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.SALA)
+           <!-- @Html.DisplayNameFor(model => model.SALA)-->
+            @Html.Label("SALA", new { @class = "col-md-2 control-label" })
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.SALA)
         </dd>
 
+       <!-- <dt>
+            @Html.DisplayNameFor(model => model.STATUS_SJEDNICE_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STATUS_SJEDNICE_ID)
+        </dd>-->
+
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Pozovi učesnike", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Nazad", "Index")
 </p>

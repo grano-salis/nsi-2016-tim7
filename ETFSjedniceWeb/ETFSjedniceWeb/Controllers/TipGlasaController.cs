@@ -16,9 +16,9 @@ namespace ETFSjedniceWeb.Controllers
 {
     public class TipGlasaController : Controller
     {
-       HttpClient client;
+        HttpClient client;
         //The URL of the WEB API Service
-       string url = "http://esjedniceservis.azurewebsites.net/api/TipGlasa";
+        string url = Startup.url+"/api/TipGlasa";
         //The HttpClient Class, this will be used for performing 
         //HTTP Operations, GET, POST, PUT, DELETE
         //Set the base address and the Header Formatter

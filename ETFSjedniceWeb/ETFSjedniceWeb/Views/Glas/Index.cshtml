@@ -11,11 +11,29 @@
 </p>
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.STAVKA_DNEVNOG_REDA_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIP_GLASA_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UCESNIK_ID)
+        </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.STAVKA_DNEVNOG_REDA_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIP_GLASA_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UCESNIK_ID)
+        </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
             @Html.ActionLink("Details", "Details", new { id=item.ID }) |

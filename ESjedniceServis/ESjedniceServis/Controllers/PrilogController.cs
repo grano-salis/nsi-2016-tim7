@@ -94,7 +94,7 @@ namespace ESjedniceServis.Controllers
         }
 
 
-         [HttpPost]
+        [HttpPost]
         public async Task<HttpResponseMessage> PostPRILOG()
         {
             // Check if the request contains multipart/form-data.
@@ -125,11 +125,11 @@ namespace ESjedniceServis.Controllers
                 db.PRILOG.Add(model);
                 db.SaveChanges();
                 File.Delete(provider.FileData[0].LocalFileName);
-              //  model.SADRZAJ = null;
-               // GetPRILOG(model.ID);
+                //  model.SADRZAJ = null;
+                // GetPRILOG(model.ID);
 
                 return Request.CreateResponse(HttpStatusCode.OK);
-                    
+
             }
             catch (System.Exception e)
             {

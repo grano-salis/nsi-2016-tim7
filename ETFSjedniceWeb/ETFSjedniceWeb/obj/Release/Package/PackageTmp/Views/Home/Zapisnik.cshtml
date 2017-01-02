@@ -1,0 +1,41 @@
+﻿@model ETFSjedniceWeb.Models.ZAPISNIK
+
+@{
+    ViewBag.Title = "Zapisnik";
+}
+
+<h2>Zapisnik</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        @if (Session["UserName"] != null)
+        {
+            <h2>Kreirao/la: @Session["UserName"].ToString()</h2>
+        }
+        
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TEKST, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TEKST)
+                @Html.ValidationMessageFor(model => model.TEKST)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Dodaj prilog" class="btn btn-default" />
+                <input type="submit" value="Kreiraj zapisnik" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Nazad", "Index")
+</div>

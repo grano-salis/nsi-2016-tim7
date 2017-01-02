@@ -17,6 +17,14 @@
         @Html.HiddenFor(model => model.ID)
 
         <div class="form-group">
+            @Html.LabelFor(model => model.SJEDNICA_ID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SJEDNICA_ID)
+                @Html.ValidationMessageFor(model => model.SJEDNICA_ID)
+            </div>
+        </div>
+
+        <div class="form-group">
             @Html.LabelFor(model => model.REDNI_BROJ, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.REDNI_BROJ)
@@ -37,6 +45,14 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.OPIS)
                 @Html.ValidationMessageFor(model => model.OPIS)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.STATUS_STAVKE_DR_ID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.STATUS_STAVKE_DR_ID)
+                @Html.ValidationMessageFor(model => model.STATUS_STAVKE_DR_ID)
             </div>
         </div>
 

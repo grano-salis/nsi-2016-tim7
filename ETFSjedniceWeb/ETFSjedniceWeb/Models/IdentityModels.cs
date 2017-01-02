@@ -42,6 +42,6 @@ namespace ETFSjedniceWeb.Models
 
         public System.Data.Entity.DbSet<ETFSjedniceWeb.Models.TIP_UCESNIKA> TIP_UCESNIKA { get; set; }
 
-        //public System.Data.Entity.DbSet<ETFSjedniceWeb.Models.ApplicationUser> ApplicationUsers { get; set; }
+      
     }
 }

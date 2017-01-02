@@ -7,18 +7,19 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ETFSjedniceWeb.Models;
-using System.Threading.Tasks;
-using System.Net.Http.Headers;
 using System.Net.Http;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
+using System.Net.Http.Headers;
 
 namespace ETFSjedniceWeb.Controllers
 {
+
     public class GlasController : Controller
     {
         HttpClient client;
         //The URL of the WEB API Service
-        string url = "http://esjedniceservis.azurewebsites.net/api/Glas";
+        string url = Startup.url + "/api/Glas";
         //The HttpClient Class, this will be used for performing 
         //HTTP Operations, GET, POST, PUT, DELETE
         //Set the base address and the Header Formatter

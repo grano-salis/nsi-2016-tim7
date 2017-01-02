@@ -16,10 +16,10 @@ namespace ETFSjedniceWeb.Controllers
 {
     public class StatusSjedniceController : Controller
     {
-        
+
         HttpClient client;
         //The URL of the WEB API Service
-        string url = "http://esjedniceservis.azurewebsites.net/api/StatusSjednice";
+        string url = Startup.url + "/api/StatusSjednice";
         //The HttpClient Class, this will be used for performing 
         //HTTP Operations, GET, POST, PUT, DELETE
         //Set the base address and the Header Formatter

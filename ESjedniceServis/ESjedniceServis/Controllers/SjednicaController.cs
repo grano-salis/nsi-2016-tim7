@@ -17,6 +17,10 @@ namespace ESjedniceServis.Controllers
     public class SjednicaController : ApiController
     {
         private eSjedniceEntities db = new eSjedniceEntities();
+        public SjednicaController()
+        {
+            db.Configuration.ProxyCreationEnabled = false;
+        }
 
         // GET: api/Sjednica
         public IQueryable<SJEDNICA> GetSJEDNICA()
@@ -76,11 +80,12 @@ namespace ESjedniceServis.Controllers
         [ResponseType(typeof(SJEDNICA))]
         public IHttpActionResult PostSJEDNICA(SJEDNICA sJEDNICA)
         {
+            //sJEDNICA.ID = 99;
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-
+            sJEDNICA.STATUS_SJEDNICE = db.STATUS_SJEDNICE.Find(7);
             db.SJEDNICA.Add(sJEDNICA);
 
             try

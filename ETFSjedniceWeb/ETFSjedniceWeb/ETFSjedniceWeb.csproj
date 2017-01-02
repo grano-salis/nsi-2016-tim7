@@ -232,6 +232,8 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <None Include="Properties\PublishProfiles\esjedniceservis2 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\esjedniceservis2 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Images\logoETFjpeg.jpg" />
     <Content Include="Images\logoETFpgn.png" />
@@ -340,6 +342,8 @@
     <Content Include="Views\Ucesnik\Details.cshtml" />
     <Content Include="Views\Ucesnik\Edit.cshtml" />
     <Content Include="Views\Ucesnik\Index.cshtml" />
+    <Content Include="Views\CvUserInfo\DodajUcesnike.cshtml" />
+    <Content Include="Views\StavkaDnevnogReda\ListaStavki.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

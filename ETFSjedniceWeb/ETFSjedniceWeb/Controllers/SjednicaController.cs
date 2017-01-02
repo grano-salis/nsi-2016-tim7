@@ -9,16 +9,16 @@ using System.Web.Mvc;
 using ETFSjedniceWeb.Models;
 using System.Net.Http;
 using System.Threading.Tasks;
-using System.Net.Http.Headers;
 using Newtonsoft.Json;
+using System.Net.Http.Headers;
 
 namespace ETFSjedniceWeb.Controllers
 {
     public class SjednicaController : Controller
     {
-       HttpClient client;
+        HttpClient client;
         //The URL of the WEB API Service
-       string url = "http://esjedniceservis.azurewebsites.net/api/Sjednica";
+        string url = Startup.url + "/api/Sjednica";
         //The HttpClient Class, this will be used for performing 
         //HTTP Operations, GET, POST, PUT, DELETE
         //Set the base address and the Header Formatter

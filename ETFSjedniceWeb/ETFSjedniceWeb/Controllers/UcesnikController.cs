@@ -18,7 +18,7 @@ namespace ETFSjedniceWeb.Controllers
     {
         HttpClient client;
         //The URL of the WEB API Service
-        string url = "http://esjedniceservis.azurewebsites.net/api/Ucesnik";
+        string url = Startup.url + "/api/Ucesnik";
         //The HttpClient Class, this will be used for performing 
         //HTTP Operations, GET, POST, PUT, DELETE
         //Set the base address and the Header Formatter
@@ -32,6 +32,18 @@ namespace ETFSjedniceWeb.Controllers
 
         // GET: EmployeeInfo
         public async Task<ActionResult> Index()
+        {
+            HttpResponseMessage responseMessage = await client.GetAsync(url);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var responseData = responseMessage.Content.ReadAsStringAsync().Result;
+                var Employees = JsonConvert.DeserializeObject<List<UCESNIK>>(responseData);
+                return View(Employees);
+            }
+            return View("Error");
+        }
+
+        public async Task<ActionResult> DodajUcesnike()
         {
             HttpResponseMessage responseMessage = await client.GetAsync(url);
             if (responseMessage.IsSuccessStatusCode)

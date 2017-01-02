@@ -190,57 +190,19 @@
     <Compile Include="Controllers\TipUcesnikaController.cs" />
     <Compile Include="Controllers\UcesnikController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
-    <Compile Include="DbModel\CHAT_PORUKA.cs">
-      <DependentUpon>SjedniceModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DbModel\CV_USER_INFO.cs">
-      <DependentUpon>SjedniceModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DbModel\GLAS.cs">
-      <DependentUpon>SjedniceModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DbModel\PRILOG.cs">
-      <DependentUpon>SjedniceModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DbModel\SJEDNICA.cs">
-      <DependentUpon>SjedniceModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DbModel\SjedniceModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SjedniceModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DbModel\SjedniceModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SjedniceModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DbModel\SjedniceModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SjedniceModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="DbModel\STATUS_SJEDNICE.cs">
-      <DependentUpon>SjedniceModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DbModel\STATUS_STAVKE_DNEVNOG_REDA.cs">
-      <DependentUpon>SjedniceModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DbModel\STATUS_UCESNIKA.cs">
-      <DependentUpon>SjedniceModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DbModel\STAVKA_DNEVNOG_REDA.cs">
-      <DependentUpon>SjedniceModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DbModel\TIP_GLASA.cs">
-      <DependentUpon>SjedniceModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DbModel\TIP_UCESNIKA.cs">
-      <DependentUpon>SjedniceModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DbModel\UCESNIK.cs">
-      <DependentUpon>SjedniceModel.tt</DependentUpon>
-    </Compile>
+    <Compile Include="DbModel\CHAT_PORUKA.cs" />
+    <Compile Include="DbModel\CV_USER_INFO.cs" />
+    <Compile Include="DbModel\eSjedniceEntities.cs" />
+    <Compile Include="DbModel\GLAS.cs" />
+    <Compile Include="DbModel\PRILOG.cs" />
+    <Compile Include="DbModel\SJEDNICA.cs" />
+    <Compile Include="DbModel\STATUS_SJEDNICE.cs" />
+    <Compile Include="DbModel\STATUS_STAVKE_DNEVNOG_REDA.cs" />
+    <Compile Include="DbModel\STATUS_UCESNIKA.cs" />
+    <Compile Include="DbModel\STAVKA_DNEVNOG_REDA.cs" />
+    <Compile Include="DbModel\TIP_GLASA.cs" />
+    <Compile Include="DbModel\TIP_UCESNIKA.cs" />
+    <Compile Include="DbModel\UCESNIK.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -253,16 +215,6 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="DbModel\SjedniceModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SjedniceModel.edmx</DependentUpon>
-      <LastGenOutput>SjedniceModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DbModel\SjedniceModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SjedniceModel.edmx</DependentUpon>
-      <LastGenOutput>SjedniceModel.cs</LastGenOutput>
-    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -285,13 +237,6 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
-    <EntityDeploy Include="DbModel\SjedniceModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>SjedniceModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="DbModel\SjedniceModel.edmx.diagram">
-      <DependentUpon>SjedniceModel.edmx</DependentUpon>
-    </Content>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -300,8 +245,8 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
-    <None Include="Properties\PublishProfiles\eSjedniceServis - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\eSjedniceServis - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\esjedniceservis2 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\esjedniceservis2 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
