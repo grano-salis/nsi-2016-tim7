@@ -4,14 +4,14 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
+<h2>Izmijeni</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>CV_USER_INFO</h4>
+        <h4>CV podaci</h4>
         <hr />
         @Html.ValidationSummary(true)
         @Html.HiddenFor(model => model.ID)
@@ -50,12 +50,12 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Sačuvaj" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Nazad", "Index")
 </div>

@@ -4,14 +4,14 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
+<h2>Izmijeni stavku dnevnog reda</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>STAVKA_DNEVNOG_REDA</h4>
+        <h4>Stavka dnevnog reda</h4>
         <hr />
         @Html.ValidationSummary(true)
         @Html.HiddenFor(model => model.ID)
@@ -65,5 +65,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Nazad", "Index")
 </div>
