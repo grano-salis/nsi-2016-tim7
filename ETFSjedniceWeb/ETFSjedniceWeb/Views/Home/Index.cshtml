@@ -1,31 +1,49 @@
-﻿@{
+﻿@model IEnumerable<ETFSjedniceWeb.Models.SJEDNICA>
+@{
     ViewBag.Title = "Home Page";
 }
 
-<!--<h1> Chat Demo</h1>-->
-<br />
-<br />
-<br />
-<div class="row">
-    <div>
-        <div class="col-md-4">
-            <input type="text" placeholder="Poruka" data-bind="value:message" />
-            <button class="btn btn-primary" data-bind="click:sendMessage">Pošalji</button>
-        </div>
-
-        <div class="col-md-4" style="background-color: white">
-            <div data-bind="foreach:messages">
-                <div id="" data-bind="text: $data"> </div>
-            </div>
-
-        </div>
-    </div>
+<h4>Zakazane sjednice</h4>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Naziv sjednice</th>
+                <th>Datum početka održavanja</th>
+                <th>Mjesto održavanja</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sjednica 1</td>
+                <td>01.01.2017.</td>
+                <td>Sala S1</td>
+                <td>@Html.ActionLink("Započni sjednicu","VodjenjeSjednice","Sjednica")</td>
+            </tr>
+           
+        </tbody>
+    </table>
 </div>
 
-@section scripts {
-    <script src="~/Scripts/jquery.signalR-2.2.1.js"> </script>
-    <script src="~/SignalR/hubs"> </script>  
-    <script src="~/Scripts/knockout-3.4.0.js"> </script>
-    <script src="~/Scripts/chatSurf.js"> </script>
+<hr />
+<h4>Završene sjednice</h4>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Naziv sjednice</th>
+                <th>Datum početka održavanja</th>
+                <th>Mjesto održavanja</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sjednica 007</td>
+                <td>28.12.2016.</td>
+                <td>Sala S9</td>
+            </tr>
 
-        }
+        </tbody>
+    </table>
+</div>

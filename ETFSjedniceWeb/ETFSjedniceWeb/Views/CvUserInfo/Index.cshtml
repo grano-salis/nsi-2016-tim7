@@ -5,15 +5,17 @@
 }
 
 <h2>Učesnici</h2>
-
+@using (Html.BeginForm())
+{
 <p>
-    @Html.ActionLink("Kreiraj novog učesnika", "Create")
+    @*<input type="button" class="btn btn-default" value="Dodaj učesnike" onclick="window.location = '/Sjednica/Create';" />*@
+    <input type="button" class="btn btn-default" value="Dodaj učesnike" onclick="window.location = '/Sjednica/Create';" />
 </p>
 <table class="table">
     <tr>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.USER_ID)
-        </th>
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.FIRST_NAME)
         </th>
@@ -28,9 +30,9 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.USER_ID)
-        </td>
+        </td>*@
         <td>
             @Html.DisplayFor(modelItem => item.FIRST_NAME)
         </td>
@@ -41,11 +43,14 @@
             @Html.DisplayFor(modelItem => item.EMAIL)
         </td>
         <td>
-            @Html.ActionLink("Izmijeni", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Više", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Izbriši", "Delete", new { id=item.ID })
+            @Html.ActionLink("Detalji o učesniku", "Details", new { id = item.ID }) 
+            @Html.CheckBox("odaberi", false)
+            @*@Html.ActionLink("Izmijeni", "Edit", new { id=item.ID }) |*@
+            
+            @*@Html.ActionLink("Izbriši", "Delete", new { id=item.ID })*@
         </td>
     </tr>
 }
 
 </table>
+}

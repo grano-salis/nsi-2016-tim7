@@ -59,6 +59,11 @@ namespace ETFSjedniceWeb.Controllers
         {
             return View(new SJEDNICA());
         }
+
+        public ActionResult VodjenjeSjednice()
+        {
+            return View();
+        }
         //The Post method
         [HttpPost]
         public async Task<ActionResult> Create(SJEDNICA tipGlasa)

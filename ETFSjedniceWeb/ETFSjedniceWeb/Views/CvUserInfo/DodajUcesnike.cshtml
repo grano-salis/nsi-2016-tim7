@@ -1,46 +1,57 @@
 ﻿@model IEnumerable<ETFSjedniceWeb.Models.CV_USER_INFO>
 
 @{
-    ViewBag.Title = "DodajUcesnike";
+    ViewBag.Title = "Index";
 }
 
-<h2>Dodaj učesnike</h2>
+<h2>Učesnici</h2>
+@using (Html.BeginForm())
+{
+    <p>
+        @*<input type="button" class="btn btn-default" value="Dodaj učesnike" onclick="window.location = '/Sjednica/Create';" />*@
+        <input type="button" class="btn btn-default" value="Dodaj učesnike" onclick="window.location = '/Sjednica/Index';" />
+    </p>
+    <table class="table">
+        <tr>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.USER_ID)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.FIRST_NAME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LAST_NAME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EMAIL)
+            </th>
+            <th></th>
+        </tr>
 
-<!--<p>
-    @Html.ActionLink("Kreiraj novog učesnika", "Create")
-</p>-->
-<table class="table">
-    <tr>
-       
-        <th>
-            @Html.DisplayNameFor(model => model.FIRST_NAME)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LAST_NAME)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EMAIL)
-        </th>
-        <th></th>
-    </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.USER_ID)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.FIRST_NAME)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LAST_NAME)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EMAIL)
+                </td>
+                <td>
+                    @Html.ActionLink("Detalji o učesniku", "Details", new { id = item.ID })
+                    @Html.CheckBox("odaberi", false)
+                    @*@Html.ActionLink("Izmijeni", "Edit", new { id=item.ID }) |*@
 
-@foreach (var item in Model) {
-    <tr>
-       
-        <td>
-            @Html.DisplayFor(modelItem => item.FIRST_NAME)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LAST_NAME)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EMAIL)
-        </td>
-        <td>
-            @Html.ActionLink("Dodaj", "Edit", new { id=item.ID }) |
-           
-        </td>
-    </tr>
+                    @*@Html.ActionLink("Izbriši", "Delete", new { id=item.ID })*@
+                </td>
+            </tr>
+        }
+
+    </table>
 }
-
-</table>
