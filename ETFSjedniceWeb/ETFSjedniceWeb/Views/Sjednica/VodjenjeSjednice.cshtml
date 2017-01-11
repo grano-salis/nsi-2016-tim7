@@ -4,100 +4,112 @@
     ViewBag.Title = "VodjenjeSjednice";
 }
 
-<div>
-    <h4>Trenutno aktivna sjednica</h4>
-    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-    {
-        @Html.AntiForgeryToken()
-
-        <div class="form-horizontal">
-            <hr />
-            @Html.ValidationSummary(true)
-
-            <div class="form-group">
-                @Html.Label("Datum početka sjednice", new { @class = "col-md-2 control-label" })
-                <div class="col-md-10">
-                    @Html.TextBox("StartDate", DateTime.Now, new { @class = "datepicker", @type = "date" })
-
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.Label("Datum završetka sjednice", new { @class = "col-md-2 control-label" })
-                <div class="col-md-10">
-                    @Html.TextBox("StartDate", DateTime.Now, new { @class = "datepicker", @type = "date" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.Label("Tema", null, new { @class = "col-md-2 control-label" })
-                <div class="col-md-10">
-                    @Html.TextBox("Tema", "Rasprava o sjednici")
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.Label("Mjesto održavanja", null, new { @class = "col-md-2 control-label" })
-                <div class="col-md-10">
-                    @Html.TextBox("Mjesto odrzavanja", "Sala S1")
-                </div>
-            </div>
-        </div>
-    }
-</div>
-<hr />
-<div id="ucesniciNaSjednici">
-    <h5>Učesnici koji prisustvuju</h5>
-    <div class="form-horizontal">
-        <div class="form-group">
-            @Html.Label("Sabina Grošić", new { @class = "col-md-2 control-label" })
-        </div>
-        <div class="form-group">
-            @Html.Label("Sabina Grošić", new { @class = "col-md-2 control-label" })
-        </div>
-        <div class="form-group">
-            @Html.Label("Sabina Grošić", new { @class = "col-md-2 control-label" })
-        </div>
-        <div class="form-group">
-            @Html.Label("Sabina Grošić", new { @class = "col-md-2 control-label" })
-        </div>
-
-        </div>
-
-    </div>
-
-<hr /><br />
-<div id="ucesniciNaSjednici">
-    <h5>TRENUTNA STAVKA DNEVNOG RADA - <i>Red.br. 1</i></h5>
-</div>
-<div id="Chat">
-    <hr />
-    <h5>Chat</h5>
-    <br />
-    <br />
-    <br />
+<div class="container-fluid">
     <div class="row">
-        <div>
-            <div class="col-md-4">
-                <input type="text" placeholder="Poruka" data-bind="value:message" />
-                <button class="btn btn-primary" data-bind="click:sendMessage">Pošalji</button>
-            </div>
-            <br />
-            <div class="col-md-4" style="background-color: white">
-                <div data-bind="foreach:messages">
-                    <div id="" data-bind="text: $data"> </div>
-                </div>
+        <div class="col-sm-6" style="float:left; height:200px; background-color:#282828; border-color:deepskyblue; border-width:2px; border-style:solid;">
+            <h4>Aktivna sjednica</h4>
+            <!--@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
 
+                <div class="form-horizontal">
+                    <hr />
+                    @Html.ValidationSummary(true)
+
+                    <div class="form-group">
+                        @Html.Label("Datum početka sjednice", new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.TextBox("StartDate", DateTime.Now, new { @class = "datepicker", @type = "date" })
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.Label("Datum završetka sjednice", new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.TextBox("StartDate", DateTime.Now, new { @class = "datepicker", @type = "date" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.Label("Tema", null, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.TextBox("Tema", "Rasprava o sjednici")
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.Label("Mjesto održavanja", null, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.TextBox("Mjesto odrzavanja", "Sala S1")
+                        </div>
+                    </div>
+                </div>
+            }-->
+            Datum početka sjednice: 9.1.2017 21:28:00<br />
+            Datum završetka sjednice: 9.1.2017 22:14:53<br></br>
+            Naziv: Sjednica 1<br />
+            Sala: S11
+        </div>
+
+        <div id="ucesniciNaSjednici" class="col-sm-6" style="float:right; height:200px; background-color:#282828; border-color:deepskyblue; border-width:2px; border-style:solid;">
+            <h5>Učesnici koji prisustvuju</h5>
+            <div class="form-horizontal">
+<div class="col-md-4" style="background-color: white; width:535px; height:90px; overflow-y:scroll;">
+    <!-- <div class="form-group">
+         @Html.Label("Aida Granulo", new { @class = "col-md-2 control-label" })
+     </div>
+     <div class="form-group">
+         @Html.Label("Sumeja Botulja", new { @class = "col-md-2 control-label" })
+     </div>-->
+    Aida Granulo <br />
+                Sumeja Botulja
             </div>
+                </div>
+    <br />
+</div>
+
         </div>
     </div>
 
-    @section scripts {
-        <script src="~/Scripts/jquery.signalR-2.2.1.js"> </script>
-        <script src="~/SignalR/hubs"> </script>
-        <script src="~/Scripts/knockout-3.4.0.js"> </script>
-        <script src="~/Scripts/chatSurf.js"> </script>
+    <div class="row">
+        <div class="col-sm-6" id="ucesniciNaSjednici" style="float:left; height:200px; background-color:#282828; border-color:deepskyblue; border-width:2px; border-style:solid;;">
+            <h5>Dnevni red </h5>
+            <div class="col-md-4" style="background-color: white; width:535px; height:90px; overflow-y:scroll;">
 
-    }
+                Stavka 1 - Opis stavke 1<br />
+                Stavka 2 - Opis stavke 2
+            </div></div>
+        <div id="Chat" class="col-sm-6" style="float:right; height:200px; background-color:#282828; border-color:deepskyblue; border-width:2px; border-style:solid;">
+            <h5>Chat</h5>
+
+            <div class="row">
+                <div>
+                    <div class="col-md-10">
+                        <input style="width:900px" type="text" placeholder="Poruka" data-bind="value:message" />
+                        <button class="btn btn-primary" data-bind="click:sendMessage">Pošalji</button>
+                    </div>
+                    <br />
+                    <br />
+
+                    <div class="col-md-4" style="background-color: white; width:535px; height:90px; margin-left:15px; overflow-y:scroll;">
+                        <div data-bind="foreach:messages">
+                            <div id="" data-bind="text: $data"> </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            @section scripts {
+                <script src="~/Scripts/jquery.signalR-2.2.1.js"> </script>
+                <script src="~/SignalR/hubs"> </script>
+                <script src="~/Scripts/knockout-3.4.0.js"> </script>
+                <script src="~/Scripts/chatSurf.js"> </script>
+
+            }
+
+        </div>
+    </div>
 
 </div>

@@ -4,54 +4,58 @@
     ViewBag.Title = "ListaStavki";
 }
 
-<h2>Stavke dnevnog reda</h2>
 
-<p>
-    @Html.ActionLink("Dodaj novu stavku!", "Create")
-</p>
-<table class="table">
-    <tr>
-      <!--  <th>
-            @Html.DisplayNameFor(model => model.SJEDNICA_ID)
-        </th>-->
-        <th>
-            @Html.DisplayNameFor(model => model.REDNI_BROJ)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NASLOV)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.OPIS)
-        </th>
-       <!-- <th>
-            @Html.DisplayNameFor(model => model.STATUS_STAVKE_DR_ID)
-        </th>-->
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-     <!--   <td>
-            @Html.DisplayFor(modelItem => item.SJEDNICA_ID)
-        </td>-->
-        <td>
-            @Html.DisplayFor(modelItem => item.REDNI_BROJ)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NASLOV)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.OPIS)
-        </td>
-       <!-- <td>
-            @Html.DisplayFor(modelItem => item.STATUS_STAVKE_DR_ID)
-        </td>-->
-        <td>
-            @Html.ActionLink("Izmijeni", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Više", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Izbriši", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
+<div class="jumbotron">
+    <h4>Stavke dnevnog reda</h4>
+    <p style="float:right;">
+        @Html.ActionLink("Dodaj novu stavku!", "Create")
+    </p>
+    <table class="table table-striped" style="color:white; border-style: double; font-weight:bold; font-family:Arial; font-size:16px">
+        <tr>
+            <!--  <th>
+                  @Html.DisplayNameFor(model => model.SJEDNICA_ID)
+              </th>-->
+            <th>
+                @Html.DisplayName("Redni broj")
+            </th>
+            <th>
+                @Html.DisplayName("Naslov")
+            </th>
+            <th>
+                @Html.DisplayName("Opis")
+            </th>
+            <!-- <th>
+                 @Html.DisplayNameFor(model => model.STATUS_STAVKE_DR_ID)
+             </th>-->
+            <th></th>
+        </tr>
 
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <!--   <td>
+                       @Html.DisplayFor(modelItem => item.SJEDNICA_ID)
+                   </td>-->
+                <td>
+                    @Html.DisplayFor(modelItem => item.REDNI_BROJ)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NASLOV)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OPIS)
+                </td>
+                <!-- <td>
+                     @Html.DisplayFor(modelItem => item.STATUS_STAVKE_DR_ID)
+                 </td>-->
+                <td>
+                    
+                    @Html.ActionLink("Izbriši", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+
+
+    </table>
+</div>

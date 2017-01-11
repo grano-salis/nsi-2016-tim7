@@ -4,10 +4,12 @@
     ViewBag.Title = "Log in";
 }
 
+<div class="jumbotron">
 <h2>Prijavite se</h2>
 <div class="row">
    
-    <div class="col-md-8" style="background-image: url('../Images/logoETFpgn.png'); width:1250px; height: 350px; background-repeat: no-repeat; background-position:right;" >
+   <!-- <div class="col-md-8" style="background-image: url('../Images/logoETFpgn.png'); width:1250px; height: 350px; background-repeat: no-repeat; background-position:center;" >
+       -->
         <section id="loginForm">
             @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
             {
@@ -16,27 +18,29 @@
                 <hr />
                 @Html.ValidationSummary(true)
                 <div class="form-group">
-                    @Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })
+                   @Html.Label("Korisničko ime", new { @class = "col-md-2 control-label" })
+
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
                         @Html.ValidationMessageFor(m => m.UserName)
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                    @*@Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })*@
+                    @Html.Label("Šifra", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
                         @Html.ValidationMessageFor(m => m.Password)
                     </div>
                 </div>
-                <div class="form-group">
+               <!-- <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
                         <div class="checkbox">
                             @Html.CheckBoxFor(m => m.RememberMe)
                             @Html.LabelFor(m => m.RememberMe)
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
                         <input type="submit" value="Log in" class="btn btn-default" />
@@ -46,7 +50,7 @@
         </section>
      
     </div>
-   
+   </div>
     
 </div>
 @section Scripts {

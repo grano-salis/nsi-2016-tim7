@@ -13,7 +13,9 @@ using Newtonsoft.Json;
 using System.Net.Http.Headers;
 
 namespace ETFSjedniceWeb.Controllers
+
 {
+    [Authorize]
     public class SjednicaController : Controller
     {
         HttpClient client;

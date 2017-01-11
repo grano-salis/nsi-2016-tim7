@@ -51,7 +51,7 @@ namespace ETFSjedniceWeb.Controllers
             {
                 var responseData = responseMessage.Content.ReadAsStringAsync().Result;
                 var Employees = JsonConvert.DeserializeObject<List<STAVKA_DNEVNOG_REDA>>(responseData);
-                var filteredList = Employees.Where(x => x.ID==id).ToList();
+                var filteredList = Employees.Where(x => x.SJEDNICA_ID==id).ToList();
                 return View(filteredList);
             }
             return View("Error");
@@ -77,11 +77,12 @@ namespace ETFSjedniceWeb.Controllers
         [HttpPost]
         public async Task<ActionResult> Create(STAVKA_DNEVNOG_REDA tipGlasa)
         {
-
+            tipGlasa.STATUS_STAVKE_DR_ID = 1;
+            tipGlasa.SJEDNICA_ID = 61;
             HttpResponseMessage responseMessage = await client.PostAsJsonAsync(url, tipGlasa);
             if (responseMessage.IsSuccessStatusCode)
             {
-                return RedirectToAction("Index");
+                return RedirectToAction("ListaStavki/61");
             }
             return RedirectToAction("Error");
         }
@@ -126,7 +127,7 @@ namespace ETFSjedniceWeb.Controllers
             HttpResponseMessage responseMessage = await client.DeleteAsync(url + "/" + id);
             if (responseMessage.IsSuccessStatusCode)
             {
-                return RedirectToAction("Index");
+                return RedirectToAction("ListaStavki/61");
             }
             return RedirectToAction("Error");
         }

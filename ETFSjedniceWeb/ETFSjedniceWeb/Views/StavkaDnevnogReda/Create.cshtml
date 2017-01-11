@@ -4,64 +4,67 @@
     ViewBag.Title = "Kreiraj novu stavku dnevnog reda";
 }
 
-<h2>Kreiraj stavku dnevnog reda</h2>
+
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        
-        <hr />
-        @Html.ValidationSummary(true)
-        <div class="form-group">
-            @Html.LabelFor(model => model.SJEDNICA_ID, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.SJEDNICA_ID)
-                @Html.ValidationMessageFor(model => model.SJEDNICA_ID)
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.REDNI_BROJ, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.REDNI_BROJ)
-                @Html.ValidationMessageFor(model => model.REDNI_BROJ)
-            </div>
-        </div>
+    <div class="jumbotron">
+        <h4>Kreiraj stavku dnevnog reda</h4>
+        <div class="form-horizontal">
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.NASLOV, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.NASLOV)
-                @Html.ValidationMessageFor(model => model.NASLOV)
-            </div>
-        </div>
+            <hr />
+            @Html.ValidationSummary(true)
+            <!--   <div class="form-group">
+                   @Html.LabelFor(model => model.SJEDNICA_ID, htmlAttributes: new { @class = "control-label col-md-2" })
+                   <div class="col-md-10">
+                       @Html.EditorFor(model => model.SJEDNICA_ID)
+                       @Html.ValidationMessageFor(model => model.SJEDNICA_ID)
+                   </div>
+               </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.OPIS, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.OPIS)
-                @Html.ValidationMessageFor(model => model.OPIS)
+               <div class="form-group">
+                   @Html.LabelFor(model => model.REDNI_BROJ, htmlAttributes: new { @class = "control-label col-md-2" })
+                   <div class="col-md-10">
+                       @Html.EditorFor(model => model.REDNI_BROJ)
+                       @Html.ValidationMessageFor(model => model.REDNI_BROJ)
+                   </div>
+               </div>
+                -->
+            <div class="form-group">
+                @Html.Label("Naslov", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.NASLOV)
+                    @Html.ValidationMessageFor(model => model.NASLOV)
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.STATUS_STAVKE_DR_ID, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.STATUS_STAVKE_DR_ID)
-                @Html.ValidationMessageFor(model => model.STATUS_STAVKE_DR_ID)
+            <div class="form-group">
+                @Html.Label("Opis", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.OPIS)
+                    @Html.ValidationMessageFor(model => model.OPIS)
+                </div>
             </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Kreiraj" class="btn btn-default" />
+            <!--
+            <div class="form-group">
+                @Html.LabelFor(model => model.STATUS_STAVKE_DR_ID, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.STATUS_STAVKE_DR_ID)
+                    @Html.ValidationMessageFor(model => model.STATUS_STAVKE_DR_ID)
+                </div>
+            </div>
+                -->
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" name="action:Create" value="Kreiraj" class="btn btn-default" />
+                </div>
             </div>
         </div>
     </div>
 }
-
-<div>
-    @Html.ActionLink("Nazad", "Index")
-</div>
+        
+       <!-- <div>
+            @Html.ActionLink("Nazad", "Index")
+        </div>-->

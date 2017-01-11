@@ -235,6 +235,7 @@
     <None Include="Properties\PublishProfiles\esjedniceservis2 - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\esjedniceservis2 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Images\background.jpg" />
     <Content Include="Images\logoETFjpeg.jpg" />
     <Content Include="Images\logoETFpgn.png" />
     <Content Include="Scripts\chatSurf.js" />

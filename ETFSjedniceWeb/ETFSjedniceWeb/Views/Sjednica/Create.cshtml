@@ -5,82 +5,57 @@
 }
 
 
-<h3>Zakaži sjednicu</h3>
-
-
-@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" })) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Unesite podatke o sjednici.</h4>
-        <hr />
-        @Html.ValidationSummary(true)
 
-        <div class="form-group">
+    <div class="jumbotron">
+        <div class="form-horizontal">
+            <h4>Zakazivanje sjednice</h4>
+            <hr />
+            @Html.ValidationSummary(true)
+            <div class="form-group">
+                @Html.Label("Datum početka sjednice:", htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-9">
+                    @Html.TextBox("DATUM_ODRZAVANJA_OD", Model.DATUM_ODRZAVANJA_OD, new { @class = "datepicker", @type = "date" })
 
-           @*@Html.LabelFor(model => model.DATUM_ODRZAVANJA_OD, htmlAttributes: new { @class = "control-label col-md-2" })*@
-            @*@Html.Label("POČETAK SJEDNICE", new { @class = "col-md-2 control-label" })*@
-            @Html.Label("Datum početka sjednice", new { @class = "col-md-2 control-label" })
-            <div class="col-md-10">
-               @Html.TextBox("StartDate", Model.DATUM_ODRZAVANJA_OD, new { @class = "datepicker", @type = "date" })
-                
-                @Html.ValidationMessageFor(model => model.DATUM_ODRZAVANJA_OD)
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-           @*@Html.LabelFor(model => model.DATUM_ODRZAVANJA_DO, htmlAttributes: new { @class = "control-label col-md-2" })*@
-            @*@Html.Label("KRAJ SJEDNICE", new { @class = "col-md-2 control-label" })*@
-            @Html.Label("Datum završetka sjednice", new { @class = "col-md-2 control-label" })
-            <div class="col-md-10">
-                @Html.TextBox("StartDate", Model.DATUM_ODRZAVANJA_DO, new { @class = "datepicker", @type = "date" })
-                @Html.ValidationMessageFor(model => model.DATUM_ODRZAVANJA_DO)
+            <div class="form-group">
+                @Html.Label("Datum kraja sjednice:", htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-9">
+                    @Html.TextBox("DATUM_ODRZAVANJA_DO", Model.DATUM_ODRZAVANJA_DO, new { @class = "datepicker", @type = "date" })
+
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            @Html.Label("Tema", new { @class = "col-md-2 control-label" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.NAZIV)
-                @Html.ValidationMessageFor(model => model.NAZIV)
+            <div class="form-group">
+                @Html.Label("Naziv:", htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-9">
+                    @Html.EditorFor(model => model.NAZIV)
+                    @Html.ValidationMessageFor(model => model.NAZIV)
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-           @Html.Label("Mjesto održavanja", new { @class = "col-md-2 control-label" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.SALA)
-                @Html.ValidationMessageFor(model => model.SALA)
+            <div class="form-group">
+                @Html.Label("Sala:", htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-9">
+                    @Html.EditorFor(model => model.SALA)
+                    @Html.ValidationMessageFor(model => model.SALA)
+                </div>
             </div>
-        </div>
 
-    
-
-        <div class="form-group">
-            @Html.Label("Pozovi učesnike", new { @class = "col-md-2 control-label" })
-            <div class="col-md-10">
-                <input type="button" class="btn btn-default" value="Odaberi učesnike" onclick="window.location = '/CvUserInfo/Index';" />
-            </div>
-        </div>
-
-        @*<div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>*@
-
-        <div class="form-group">
-            @Html.Label("Kreiraj dnevni red", new { @class = "col-md-2 control-label" })
-            <div class="col-md-10">
-
-                <input type="button" class="btn btn-default" value="Kreiraj" onclick="window.location = '/Sjednica/Index';" />
-                @*@Html.ActionLink("Kreiraj", "Create", "DnevniRed", null, new { @class = "navbar-brand" })*@
+            <div class="form-group">
+                <div class="col-md-offset-3 col-md-9">
+                    <input type="submit" name="action:Create" value="Kreiraj" class="btn btn-default" />
+                </div>
             </div>
         </div>
     </div>
 }
-
-<div>
-    @Html.ActionLink("Nazad", "Index")
+   
+<!--<div>
+    @Html.ActionLink("Back to List", "Index")
 </div>
+    -->

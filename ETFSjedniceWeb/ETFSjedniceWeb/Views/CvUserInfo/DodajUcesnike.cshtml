@@ -4,26 +4,28 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Učesnici</h2>
+<div class="jumbotron">
+
 @using (Html.BeginForm())
 {
+    <h4>Učesnici</h4>
     <p>
         @*<input type="button" class="btn btn-default" value="Dodaj učesnike" onclick="window.location = '/Sjednica/Create';" />*@
-        <input type="button" class="btn btn-default" value="Dodaj učesnike" onclick="window.location = '/Sjednica/Index';" />
+       <input type="button" class="btn btn-default" value="Pozovi učesnike" onclick="window.location = '/Sjednica/Index';" />
     </p>
-    <table class="table">
+    <table class="table table-striped" style="border-style: double;">
         <tr>
             @*<th>
                     @Html.DisplayNameFor(model => model.USER_ID)
                 </th>*@
             <th>
-                @Html.DisplayNameFor(model => model.FIRST_NAME)
+                @Html.DisplayName("Ime")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.LAST_NAME)
+                @Html.DisplayName("Prezime")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.EMAIL)
+                @Html.DisplayName("E-mail")
             </th>
             <th></th>
         </tr>
@@ -44,7 +46,7 @@
                     @Html.DisplayFor(modelItem => item.EMAIL)
                 </td>
                 <td>
-                    @Html.ActionLink("Detalji o učesniku", "Details", new { id = item.ID })
+                    <!-- @Html.ActionLink("Detalji o učesniku", "Details", new { id = item.ID })-->
                     @Html.CheckBox("odaberi", false)
                     @*@Html.ActionLink("Izmijeni", "Edit", new { id=item.ID }) |*@
 
@@ -55,3 +57,4 @@
 
     </table>
 }
+</div>

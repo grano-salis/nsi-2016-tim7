@@ -4,61 +4,63 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Obriši stavku dnevnog reda</h2>
 
-<h3>Da li ste sigurni da zeliti obrisati odabranu stavku?</h3>
-<div>
-    <h4>Stavka dnevnog reda</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.SJEDNICA_ID)
-        </dt>
+<div class="jumbotron">
+    <h5>Da li ste sigurni da želite obrisati ovu stavku dnevnog reda?</h5>
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            @*<dt>
+                @Html.DisplayNameFor(model => model.SJEDNICA_ID)
+            </dt>*@
 
-        <dd>
-            @Html.DisplayFor(model => model.SJEDNICA_ID)
-        </dd>
+            @*<dd>
+                @Html.DisplayFor(model => model.SJEDNICA_ID)
+            </dd>*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.REDNI_BROJ)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.REDNI_BROJ)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.REDNI_BROJ)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.REDNI_BROJ)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.NASLOV)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.NASLOV)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.NASLOV)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.NASLOV)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.OPIS)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.OPIS)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.OPIS)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.OPIS)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.STATUS_STAVKE_DR_ID)
-        </dt>
+            @*<dt>
+                @Html.DisplayNameFor(model => model.STATUS_STAVKE_DR_ID)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.STATUS_STAVKE_DR_ID)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.STATUS_STAVKE_DR_ID)
+            </dd>*@
 
-    </dl>
+        </dl>
 
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Obrisi" class="btn btn-default" /> |
-            @Html.ActionLink("Nazad", "Index")
-        </div>
-    }
+    <div class="form-actions no-color" style="margin-left:180px">
+        @Html.ActionLink("Nazad", "Index") |
+        <input type="submit" name="action:Delete" value="Obriši" class="btn btn-default" />
+
+    </div>
+        }
+    </div>
 </div>

@@ -3,47 +3,43 @@
     ViewBag.Title = "Home Page";
 }
 
-<h4>Zakazane sjednice</h4>
-<div class="container">
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Naziv sjednice</th>
-                <th>Datum početka održavanja</th>
-                <th>Mjesto održavanja</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Sjednica 1</td>
-                <td>01.01.2017.</td>
-                <td>Sala S1</td>
-                <td>@Html.ActionLink("Započni sjednicu","VodjenjeSjednice","Sjednica")</td>
-            </tr>
-           
-        </tbody>
-    </table>
+<div class="jumbotron">
+    <h4>Zakazane sjednice</h4>
+    <div class="container">
+        <table class="table table-striped" style="color:white; border-style: double; font-weight:bold; font-family:Arial; font-size:16px">
+            <thead>
+                <tr>
+                    <th>Naziv sjednice</th>
+                    <th>Datum početka održavanja</th>
+                    <th>Mjesto održavanja</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sjednica 1</td>
+                    <td>9.1.2017</td>
+                    <td>S11</td>
+                    <td>@Html.ActionLink("Započni sjednicu", "VodjenjeSjednice", "Sjednica")</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
 </div>
+<div class="jumbotron">
 
-<hr />
-<h4>Završene sjednice</h4>
-<div class="container">
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Naziv sjednice</th>
-                <th>Datum početka održavanja</th>
-                <th>Mjesto održavanja</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Sjednica 007</td>
-                <td>28.12.2016.</td>
-                <td>Sala S9</td>
-            </tr>
+    <h4>Završene sjednice</h4>
+    <div class="container">
+        <table class="table table-striped" style="color:white; border-style: double; font-weight:bold; font-family:Arial; font-size:16px">
+            <thead>
+                <tr>
+                    <th>Naziv sjednice</th>
+                    <th>Datum početka održavanja</th>
+                    <th>Mjesto održavanja</th>
+                </tr>
+            </thead>
 
-        </tbody>
-    </table>
+        </table>
+    </div>
 </div>

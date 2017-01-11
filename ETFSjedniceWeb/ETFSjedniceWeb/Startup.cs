@@ -7,7 +7,7 @@ namespace ETFSjedniceWeb
     
     public partial class Startup
     {
-        public static string url = "http://esjedniceservis2.azurewebsites.net/";
+        public static string url = "http://localhost:59051/";
 
         public void Configuration(IAppBuilder app)
         {
